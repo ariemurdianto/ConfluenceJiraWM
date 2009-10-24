@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">confluenceJira</value>
+  <value name="encodeutf8">true</value>
+  <value name="shared">c3RhdGljIFByb3BlcnRpZXMgcHJvcHMgPSBTeXN0ZW0uZ2V0UHJvcGVydGllcygpOwpmaW5hbCBz
+dGF0aWMgU3RyaW5nIENSRUFURUQgPSAiQ3JlYXRlZDoiOwpmaW5hbCBzdGF0aWMgU3RyaW5nIGpp
+cmFGb2xkZXJOYW1lID0gImppcmEtdGVzdGVyIjsKZmluYWwgc3RhdGljIFN0cmluZyBqaXJhUmVh
+ZEZvbGRlck5hbWUgPSAicmVhZC1qaXJhLXRlc3RlciI7CmZpbmFsIHN0YXRpYyBTdHJpbmcgY29u
+Zmx1ZW5jZUZvbGRlck5hbWUgPSAiY29uZmx1ZW5jZS10ZXN0ZXIiOwpmaW5hbCBzdGF0aWMgU3Ry
+aW5nIGNvbmZsdWVuY2VSZWFkRm9sZGVyTmFtZSA9ICJyZWFkLWNvbmZsdWVuY2UtdGVzdGVyIjsK
+ZmluYWwgc3RhdGljIFN0cmluZyBwcm90b2NvbCA9ICJpbWFwcyI7CmZpbmFsIHN0YXRpYyBTdHJp
+bmcgbWFpbFJlZ2V4VG9GZXRjaCA9ICJcXHNbYS16QS1aXStcXDpcXHMiOwpmaW5hbCBzdGF0aWMg
+U3RyaW5nIENPTVBPTkVOVF9QUk9KRUNUID0gIlByb2plY3Q6IjsKZmluYWwgc3RhdGljIFN0cmlu
+ZyBDT01QT05FTlRfU1VNTUFSWSA9ICJTdW1tYXJ5OiI7CmZpbmFsIHN0YXRpYyBTdHJpbmcgQ09N
+UE9ORU5UX0RFU0NSSVBUSU9OID0gIkRlc2NyaXB0aW9uOiI7CgpmaW5hbCBzdGF0aWMgU3RyaW5n
+IG1haWxTcGFjZSA9ICJcXD5cXHMrW2EtekEtWjAtOVxcc10rIjsKCnN0YXRpYyBjbGFzcyBQYWdl
+ewpTdHJpbmcgc3BhY2U7ClN0cmluZyB0aXRsZTsKU3RyaW5nIGNvbnRlbnQ7Cn07Cg==</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>objectData.*</value>
+    <value>java.util.Properties</value>
+    <value>java.util.regex.Matcher</value>
+    <value>javax.mail.Folder</value>
+    <value>javax.mail.Message</value>
+    <value>javax.mail.Session</value>
+    <value>javax.mail.Store</value>
+    <value>javax.mail.Transport</value>
+    <value>javax.mail.internet.InternetAddress</value>
+    <value>javax.mail.internet.MimeMessage</value>
+    <value>javax.mail.search.SubjectTerm</value>
+    <value>java.util.regex.Pattern</value>
+    <value>java.util.regex.Matcher</value>
+    <value>java.util.HashMap</value>
+    <value>org.apache.commons.httpclient.HttpClient</value>
+    <value>org.apache.commons.httpclient.HttpException</value>
+    <value>org.apache.commons.httpclient.methods.PostMethod</value>
+    <value>java.io.IOException</value>
+    <value>javax.mail.Flags.Flag</value>
+    <value>org.apache.commons.httpclient.methods.GetMethod</value>
+  </array>
+</Values>

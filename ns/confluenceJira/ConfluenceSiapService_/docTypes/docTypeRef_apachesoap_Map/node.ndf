@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_nsName">confluenceJira.ConfluenceSiapService_.docTypes:docTypeRef_apachesoap_Map</value>
+    <value name="node_pkg">confluenceJira</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">item</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+        <value name="rec_closed">true</value>
+        <record name="svc_universal_name" javaclass="com.wm.util.Values">
+          <value name="ncName">item</value>
+        </record>
+        <value name="rec_ref">confluenceJira.ConfluenceSiapService_.docTypes:docTypeRef_apachesoap_mapItem</value>
+      </record>
+    </array>
+    <record name="svc_universal_name" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://xml.apache.org/xml-soap</value>
+      <value name="ncName">MapRef</value>
+    </record>
+  </record>
+</Values>

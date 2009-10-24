@@ -1,0 +1,1907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="schema" javaclass="com.wm.util.Values">
+    <value name="node_type">schema</value>
+    <value name="node_nsName">confluenceJira.ConfluenceSiapService_.docTypes:schema_ConfluenceSiapService</value>
+    <value name="node_pkg">confluenceJira</value>
+    <value name="contentType">3</value>
+    <value name="targetNamespace">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+    <record name="attributes" javaclass="com.wm.util.Values">
+      <list name="table">
+      </list>
+    </record>
+    <record name="elements" javaclass="com.wm.util.Values">
+      <list name="table">
+      </list>
+    </record>
+    <record name="types" javaclass="com.wm.util.Values">
+      <list name="table">
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteSpaceSummary</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteSpaceSummary</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteSpaceSummary</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteSpaceSummary[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteSpaceSummary[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteSpaceSummary</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_xsd_anyType</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">anyType</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+                  <value name="ncName">anyType</value>
+                </record>
+              </record>
+              <value name="default">xsd:anyType[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">xsd:anyType[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_xsd_anyType</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteSearchResult</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteSearchResult</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteSearchResult</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteSearchResult[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteSearchResult[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteSearchResult</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteAttachment</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteAttachment</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteAttachment</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteAttachment[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteAttachment[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteAttachment</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteNodeStatus</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteNodeStatus</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteNodeStatus</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteNodeStatus[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteNodeStatus[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteNodeStatus</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteLabel</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteLabel</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteLabel</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteLabel[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteLabel[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteLabel</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteComment</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteComment</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteComment</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteComment[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteComment[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteComment</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemotePageSummary</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemotePageSummary</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemotePageSummary</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemotePageSummary[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemotePageSummary[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemotePageSummary</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteSpaceGroup</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteSpaceGroup</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteSpaceGroup</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteSpaceGroup[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteSpaceGroup[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteSpaceGroup</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteContentPermissionSet</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteContentPermissionSet</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteContentPermissionSet</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteContentPermissionSet[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteContentPermissionSet[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteContentPermissionSet</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_xsd_string</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">string</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <value name="dataTypeVersion">dtVersion2</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+                    <value name="ncName">string</value>
+                  </record>
+                </array>
+              </record>
+              <value name="default">xsd:string[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">xsd:string[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_xsd_string</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemotePageHistory</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemotePageHistory</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemotePageHistory</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemotePageHistory[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemotePageHistory[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemotePageHistory</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteSpace</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteSpace</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteSpace</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteSpace[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteSpace[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteSpace</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemotePermission</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemotePermission</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemotePermission</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemotePermission[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemotePermission[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemotePermission</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteBlogEntrySummary</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteBlogEntrySummary</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteBlogEntrySummary</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteBlogEntrySummary[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteBlogEntrySummary[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteBlogEntrySummary</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="contentType">2</value>
+          <value name="internalType">instance</value>
+          <value name="name">ArrayOf_tns2_RemoteContentPermission</value>
+          <list name="elements">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">element</value>
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="name">RemoteContentPermission</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">2</value>
+                <value name="internalType">reference</value>
+                <record name="targetName" javaclass="com.wm.util.Values">
+                  <value name="xmlns">http://beans.soap.rpc.confluence.atlassian.com</value>
+                  <value name="ncName">RemoteContentPermission</value>
+                </record>
+              </record>
+              <value name="default">tns2:RemoteContentPermission[]</value>
+              <value name="internalType">instance</value>
+            </record>
+          </list>
+          <list name="attributes">
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="default">tns2:RemoteContentPermission[]</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">arrayType</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="required">false</value>
+              <value name="internalType">reference</value>
+              <record name="targetName" javaclass="com.wm.util.Values">
+                <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+                <value name="ncName">offset</value>
+              </record>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">id</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">ID</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">href</value>
+              <record name="type" javaclass="com.wm.util.Values">
+                <value name="contentType">1</value>
+                <value name="internalType">reference</value>
+                <array name="targetNames" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="xmlns">http://www.w3.org/1999/XMLSchema</value>
+                    <value name="ncName">uriReference</value>
+                  </record>
+                </array>
+              </record>
+              <value name="required">false</value>
+              <value name="internalType">instance</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="tagType">attribute</value>
+              <value name="name">$$ANY_ATTRIBUTE</value>
+              <value name="required">false</value>
+              <value name="internalType">any</value>
+              <record name="wildcard" javaclass="com.wm.util.Values">
+                <record name="symbol" javaclass="com.wm.util.Values">
+                  <value name="ncName">$$ANY</value>
+                </record>
+                <value name="minOccurs">1</value>
+                <value name="maxOccurs">1</value>
+                <value name="modelType">any</value>
+                <value name="qualifier">1</value>
+                <array name="uris" type="value" depth="1">
+                  <value>http://schemas.xmlsoap.org/soap/encoding/</value>
+                </array>
+                <value name="processContents">0</value>
+              </record>
+            </record>
+          </list>
+          <record name="contentModel" javaclass="com.wm.util.Values">
+            <record name="symbol" javaclass="com.wm.util.Values">
+              <value name="ncName">$$EMPTY</value>
+            </record>
+            <value name="minOccurs">0</value>
+            <value name="maxOccurs">1</value>
+            <value name="modelType">empty</value>
+          </record>
+          <array name="parent-ancestors" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://schemas.xmlsoap.org/soap/encoding/</value>
+              <value name="ncName">Array</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">anyType</value>
+            </record>
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+              <value name="ncName">ArrayOf_tns2_RemoteContentPermission</value>
+            </record>
+          </array>
+          <value name="classname">com.wm.lang.schema.WmComplexType</value>
+        </record>
+      </list>
+    </record>
+    <record name="uriReferencePrefixPairs" javaclass="com.wm.util.Values">
+      <value name="http://xml.apache.org/xml-soap">apachesoap</value>
+      <value name="http://schemas.xmlsoap.org/soap/encoding/">wmns1</value>
+      <value name="http://www.w3.org/2001/XMLSchema">xsd</value>
+      <value name="http://rpc.confluence.atlassian.com">tns1</value>
+      <value name="http://localhost:8301/rpc/soap-axis/confluenceservice-v1">impl</value>
+      <value name="http://www.w3.org/1999/XMLSchema">ns</value>
+      <value name="http://beans.soap.rpc.confluence.atlassian.com">tns2</value>
+    </record>
+  </record>
+</Values>

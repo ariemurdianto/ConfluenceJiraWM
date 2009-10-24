@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+
+  <!-- nodes -->
+
+<SEQUENCE EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT>WebService Descriptor and Operation</COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/wsdName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">confluenceJira:ConfluenceSiapService</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/wsdOperationName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">getClusterInformation</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<BRANCH SWITCH="/_port">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="confluenceservice-v1" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/address;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/binding;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">confluenceservice-v1SoapBinding</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/address;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">http://localhost:8301/rpc/soap-axis/confluenceservice-v1</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/binding;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">confluenceservice-v1SoapBinding</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
+
+<BRANCH SWITCH="/_url">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+</MAP>
+
+<MAP NAME="$default" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/_url;1;0" TO="/address;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/_url;1;0">
+</MAPDELETE>
+</MAP>
+</BRANCH>
+
+<BRANCH SWITCH="/binding">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="confluenceservice-v1SoapBinding" EXIT-ON="FAILURE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/in0;1;0" TO="/request;2;0/in0;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/binding;1;0">
+</MAPDELETE>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/wsdBinderName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">confluenceservice-v1SoapBinding</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/soapProtocol;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SOAP 1.1 Protocol</value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<INVOKE SERVICE="pub.client:soapClient">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/method;2;0/namespaceName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">http://soap.rpc.confluence.atlassian.com</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/method;2;0/localName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">getClusterInformation</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/targetInputSignature;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">confluenceJira.ConfluenceSiapService_.docTypes:ConfluenceSoapService_getClusterInformation_Input</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/targetOutputSignature;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">confluenceJira.ConfluenceSiapService_.docTypes:ConfluenceSoapService_getClusterInformation_Output</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/soapAction;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/targetInputSignature;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/targetOutputSignature;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/request;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapAction;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<BRANCH SWITCH="/soapStatus">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<SEQUENCE NAME="0" EXIT-ON="FAILURE">
+  <COMMENT>The server successfully returned the results.</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/response;2;0/getClusterInformationReturn;2;0" TO="/getClusterInformationReturn;2;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapBody;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/address;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/header;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapData;3;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/SOAP-FAULT;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapAction;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/auth;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/getClusterInformationResponse;2;0/auth;2;0">
+</MAPDELETE>
+</MAP>
+</SEQUENCE>
+
+<SEQUENCE NAME="$default" EXIT-ON="FAILURE">
+  <COMMENT>The server returned a SOAP fault.</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/SOAP-FAULT;2;0/soapProtocol;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SOAP 1.1 Protocol</value>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapBody;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/address;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/header;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapData;3;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/soapAction;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/auth;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/;2;0/auth;2;0">
+</MAPDELETE>
+
+<MAPCOPY NAME="Link" FROM="/response;2;0/SOAP-ENV:Fault;2;0" TO="/SOAP-FAULT;2;0/Fault_1_1;2;0">
+</MAPCOPY>
+</MAP>
+</SEQUENCE>
+</BRANCH>
+</SEQUENCE>
+</BRANCH>
+
+<MAPDELETE NAME="Dropper" FIELD="/wsdName;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/wsdOperationName;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/wsdBinderName;1;0">
+</MAPDELETE>
+</SEQUENCE>
+</FLOW>
