@@ -132,6 +132,8 @@
 1. the project key will have a key as the first 3 characters of the project name.
 so does space name and space key
 2. only has 1 permission scheme
+3. If the coming command is Created, then the issue should be created first. Else, it
+will fail.
 
 The required field: name, key, lead,permissionScheme(0)... 
 The submit button is Add</value>

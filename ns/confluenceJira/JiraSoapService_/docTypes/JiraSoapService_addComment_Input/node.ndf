@@ -57,9 +57,16 @@
         <array name="rec_fields" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">author</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -75,9 +82,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">body</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -93,9 +107,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">created</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -111,9 +132,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">groupLevel</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -129,9 +157,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">id</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -147,9 +182,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">roleLevel</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -165,9 +207,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">updateAuthor</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>
@@ -183,9 +232,16 @@
           </record>
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
+            <value name="node_comment"></value>
+            <record name="node_hints" javaclass="com.wm.util.Values">
+              <null name="field_usereditable"/>
+              <value name="field_largerEditor">false</value>
+              <value name="field_password">false</value>
+            </record>
             <value name="field_name">updated</value>
             <value name="field_type">string</value>
             <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
             <record name="field_content_type" javaclass="com.wm.util.Values">
               <value name="contentType">1</value>
               <value name="internalType">reference</value>

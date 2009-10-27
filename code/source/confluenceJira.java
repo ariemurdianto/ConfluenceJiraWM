@@ -1,8 +1,8 @@
 
 
 // -----( IS Java Code Template v1.2
-// -----( CREATED: 2009-10-23 22:18:25 SGT
-// -----( ON-HOST: GUN-TANK
+// -----( CREATED: 2009-10-27 19:34:06 SGT
+// -----( ON-HOST: www.ganteng.com
 
 import com.wm.data.*;
 import com.wm.util.Values;
@@ -29,6 +29,8 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import java.io.IOException;
 import javax.mail.Flags.Flag;
 import org.apache.commons.httpclient.methods.GetMethod;
+import java.util.List;
+import java.util.Arrays;
 // --- <<IS-END-IMPORTS>> ---
 
 public final class confluenceJira
@@ -63,6 +65,7 @@ public final class confluenceJira
 		// [o] - field:0:required title
 		// [o] - field:0:required contentDescription
 		// [o] - field:0:required space
+		// [o] - field:0:required command
 		
 		// pipeline
 		IDataCursor pipelineCursor = pipeline.getCursor();
@@ -81,10 +84,14 @@ public final class confluenceJira
 			props.put("mail.smtp.password", passwordMail);
 			props.put("mail.smtp.auth", authentication);
 			Session session = Session.getInstance(props);
-		        Pattern mailPattern = Pattern.compile(mailSpace);
+		        Pattern mailPattern = Pattern.compile(mailConfluenceSpaceToFilter);
+			Pattern mailContentAddedPattern = Pattern.compile(mailConfluenceContentAddedToFilter);
+			Pattern mailContentCommentPattern = Pattern.compile(mailConfluenceContentCommentToFilter);
+		
 			IData[] IssuePageData = null;
 		        try
 		        {
+		
 		            Store store = session.getStore(protocol);
 		            store.connect(mailServer,usernameMail, passwordMail);
 		            Folder folder = store.getFolder(confluenceFolderName);
@@ -105,22 +112,36 @@ public final class confluenceJira
 				IssuePageData[i] = IDataFactory.create();
 				IDataCursor IssuePageDataCursor = IssuePageData[i].getCursor();
 		                Message message = messages[i];
-				message.setFlag(Flag.DELETED, true);
+				//message.setFlag(Flag.DELETED, true);
 		                String mailSubject = message.getSubject();
 		                Matcher mailSubjectFilter;
 		                try
 		                {
 		                	mailSubject = mailSubject.replace("["+confluenceFolderName+"] ", "");
 		                    mailSubjectFilter = mailPattern.matcher(mailSubject);
+				    System.out.println("this is mail subject: "+mailSubject);
 		                    if(mailSubjectFilter.find())
 		                    {
 		                    	start = mailSubjectFilter.start();
-		                    	components.put(COMPONENT_SUMMARY, mailSubject.substring(start));
-		                        components.put(COMPONENT_PROJECT, mailSubject.substring(0, start).trim());
-		                        components.put(COMPONENT_DESCRIPTION, message.getContent().toString());
-					IDataUtil.put( IssuePageDataCursor, "title", components.get(COMPONENT_SUMMARY));
-					IDataUtil.put( IssuePageDataCursor, "contentDescription", components.get(COMPONENT_DESCRIPTION) );
-					IDataUtil.put( IssuePageDataCursor, "space", components.get(COMPONENT_PROJECT));
+					Matcher mailContentAddedMatcher = mailContentAddedPattern.matcher(message.getContent().toString());
+					Matcher mailContentCommentMatcher = mailContentCommentPattern.matcher(message.getContent().toString());
+		
+					String content = "";
+		                    	if(mailContentAddedMatcher.find())
+					{
+						content = mailContentAddedMatcher.group(mailContentAddedMatcher.groupCount());
+						IDataUtil.put( IssuePageDataCursor, "command", "Created");
+					}
+					else if(mailContentCommentMatcher.find())
+					{
+						content = mailContentCommentMatcher.group(mailContentCommentMatcher.groupCount());
+						IDataUtil.put( IssuePageDataCursor, "command", "Commented");
+					}
+		
+					IDataUtil.put( IssuePageDataCursor, "title", mailSubject.substring(start).replaceFirst("\\>\\s+",""));
+					IDataUtil.put( IssuePageDataCursor, "contentDescription", content);
+					IDataUtil.put( IssuePageDataCursor, "space", mailSubject.substring(0, start).trim());
+					
 					IssuePageDataCursor.destroy();
 		                    }
 		                } 
@@ -300,6 +321,8 @@ public final class confluenceJira
 		// [o] - field:0:required title
 		// [o] - field:0:required contentDescription
 		// [o] - field:0:required space
+		// [o] - field:0:required issue
+		// [o] - field:0:required command
 		IDataCursor pipelineCursor = pipeline.getCursor();
 			String	mailServer = IDataUtil.getString( pipelineCursor, "mailServer" );
 			String	usernameMail = IDataUtil.getString( pipelineCursor, "usernameMail" );
@@ -316,17 +339,19 @@ public final class confluenceJira
 		props.put("mail.smtp.auth", authentication);
 		
 		Session session = Session.getInstance(props);
-		HashMap<String, String> components = new HashMap<String, String>();
 		//document as an output
 		IData[] IssuePageData = null;
 		
 		Pattern mailPattern = Pattern.compile(mailRegexToFetch);
+		Pattern mailContentPattern = Pattern.compile(mailContentToFilter);
+		Pattern mailCommentPattern = Pattern.compile(mailCommentToFilter);
+		Pattern mailIssuePattern = Pattern.compile(mailIssueToFilter);
 		try
 		{
 		    Store store = session.getStore(protocol);
 		    store.connect(inboxServer, usernameMail, passwordMail);
 		    Folder folder = store.getFolder(jiraFolderName);
-		    folder.open(Folder.READ_WRITE);            
+		    folder.open(Folder.READ_WRITE);
 		    SubjectTerm subjectFilter = new SubjectTerm("jira-tester");
 		    Message[] messages = folder.search(subjectFilter);
 		    
@@ -341,63 +366,83 @@ public final class confluenceJira
 		    for(int i=messages.length-1; i>=0; i--)
 		    {
 		    	Message message = messages[i];
+				boolean isComment = false;
 		        String mailSubject = message.getSubject();
 			//message.setFlag(Flag.DELETED, true);
-		        Matcher mailSubjectFilter;
 		        try
-		        {		
-		        	mailSubjectFilter = mailPattern.matcher(mailSubject);
-		                if(mailSubjectFilter.find())
-		                {
-					start = mailSubjectFilter.start();
-		                        end = mailSubjectFilter.end();
-		                 }
-		                 components.put("Summary", mailSubject.substring(end));
-		                 mailSubject = mailSubject.substring(start, end);
-		                 mailSubject = mailSubject.trim();
-		                 if(mailSubject.equals(CREATED))
-		                 {
-				    IssuePageData[i] = IDataFactory.create();
-				    IDataCursor IssuePageDataCursor = IssuePageData[i].getCursor();
-				    IDataUtil.put( IssuePageDataCursor, "title",  components.get("Summary"));
+		        {
+					Matcher matcherIssue = mailIssuePattern.matcher(mailSubject);
+			    String issueKey = "";
+		            if(matcherIssue.find())
+		            {
+		                issueKey = matcherIssue.group(matcherIssue.groupCount());
+		                mailSubject = mailSubject.replaceFirst("\\("+issueKey+"\\)", "");
+		            }
+			    String tempMailSubject = mailSubject;
+					Matcher matcherSubject = mailPattern.matcher(mailSubject);
+		            if(matcherSubject.find())
+		            {
+						start = matcherSubject.start();
+		                end = matcherSubject.end();
+		            }
+			    tempMailSubject = tempMailSubject.replace(tempMailSubject.substring(0, end),"");;
+			    tempMailSubject = tempMailSubject.trim();
+		            mailSubject = mailSubject.substring(start, end);
+		            mailSubject = mailSubject.trim();
 					
-		                    String content = message.getContent().toString();
-		                    String[] contentLines = content.split("\n");
-		                    for(int j =1; j<contentLines.length; j++)
+		        	if(COMMAND.contains(mailSubject))
+		            {
+						IssuePageData[i] = IDataFactory.create();
+						IDataCursor IssuePageDataCursor = IssuePageData[i].getCursor();
+						IDataUtil.put( IssuePageDataCursor, "issue", issueKey);
+						IDataUtil.put( IssuePageDataCursor, "title",  tempMailSubject);
+						IDataUtil.put( IssuePageDataCursor, "command", mailSubject.substring(0,mailSubject.length()-1));
+						
+		                String content = message.getContent().toString();
+						Matcher matcherComment = mailCommentPattern.matcher(content);
+		                if(matcherComment.find())
+		                {
+							String comment = matcherComment.group(matcherComment.groupCount());
+							System.out.println("this is comment: "+comment);
+							IDataUtil.put( IssuePageDataCursor, "contentDescription", comment);
+					  		content = content.replace(comment, "");
+							
+		                    isComment = true;
+		                }
+		                String[] contentLines = content.split("\n");
+		                for(int j =1; j<contentLines.length; j++)
+		                {
+							contentLines[j] = contentLines[j].trim();
+		                    if(contentLines[j].contains(COMPONENT_PROJECT))
 		                    {
-		                       contentLines[j] = contentLines[j].trim();
-		                       if(contentLines[j].contains(COMPONENT_PROJECT))
-		                       {
-		                          contentLines[j] = contentLines[j].replace(COMPONENT_PROJECT, "");
-		                    	  components.put("Project", contentLines[j].trim());
-					  IDataUtil.put( IssuePageDataCursor, "space", components.get("Project").toString());
-		                       }
-		                       else 
-		                       {
-		                          if(j+1 == contentLines.length) break;
-		                    	  if(contentLines[j].trim().equals("") && contentLines[j+1].trim().equals(""))
-		                    	  {
-		                    	      j = j + 2;
-		                    	      contentLines[j] = contentLines[j].replace(COMPONENT_DESCRIPTION, "");
-		                    	      components.put("Description", contentLines[j].trim());
-					      IDataUtil.put( IssuePageDataCursor, "contentDescription", contentLines[j].trim());
-		                    	   }
-		                    	   if(contentLines[j].equals("--"))
+								contentLines[j] = contentLines[j].replaceFirst(".*"+COMPONENT_PROJECT, "");
+								IDataUtil.put( IssuePageDataCursor, "space", contentLines[j].trim());
+		                    }
+		                    else 
+		                    {
+								if(j+1 == contentLines.length) break;
+		                    	if(contentLines[j].trim().equals("") && contentLines[j+1].trim().equals("") & !isComment)
+		                    	{
+									j = j + 2;
+		                    	    contentLines[j] = contentLines[j].replaceFirst(".*"+COMPONENT_DESCRIPTION, "");
+									IDataUtil.put( IssuePageDataCursor, "contentDescription", contentLines[j].trim());
+		                    	}
+		                    	if(contentLines[j].equals("--"))
 		                    	   break;
 		                    			
-		                    	}
-		                     }
-				  IssuePageDataCursor.destroy();
-		              }	
-		           }
-		           catch(Exception e)
-		           {
-		              e.printStackTrace();
-		           }
+							}
+		                }
+						IssuePageDataCursor.destroy();
+		            }	
 		        }
+		        catch(Exception e)
+		        {
+					e.printStackTrace();
+		        }
+		    }
 		  	folder.close(true);
 			readFolder.close(true);
-		    	System.out.println("the messages lengthsssss: "+messages.length);
+		    System.out.println("the messages lengthsssss: "+messages.length);
 		}
 		catch(Exception e)
 		{
@@ -421,12 +466,24 @@ public final class confluenceJira
 	final static String confluenceFolderName = "confluence-tester";
 	final static String confluenceReadFolderName = "read-confluence-tester";
 	final static String protocol = "imaps";
-	final static String mailRegexToFetch = "\\s[a-zA-Z]+\\:\\s";
+	
+	
 	final static String COMPONENT_PROJECT = "Project:";
 	final static String COMPONENT_SUMMARY = "Summary:";
 	final static String COMPONENT_DESCRIPTION = "Description:";
+	final static String COMPONENT_KEY = "Key:";
+	final static List<String> COMMAND = Arrays.asList("Created:", "Commented:");
+	final static String COMMAND_COMMENT = "Commented:";
 	
-	final static String mailSpace = "\\>\\s+[a-zA-Z0-9\\s]+";
+	final static String mailRegexToFetch = "\\s[a-zA-Z]+\\:\\s";
+	final static String mailContentToFilter = "\\s\\s\\s\\s[a-zA-Z\\:\\s\\-0-9/]+\\s\\s\\-\\-";
+	final static String mailCommentToFilter = "[a-zA-Z]+\\scommented\\son\\s[A-Z\\-0-9]+\\:\\s+\\-+\\s*([a-zA-Z0-9\\s\\.]+)";
+	final static String mailIssueToFilter = "\\(([A-Za-z0-9\\-]+)\\)";
+	
+	final static String mailConfluenceSpaceToFilter = "\\>\\s+[a-zA-Z0-9\\s]+";
+	final static String mailConfluenceContentAddedToFilter = "Added\\sby\\s[A-Za-z\\-0-9]+\\:\\s+\\-+\\s*([\\(\\)\\-\\/\\;\\,a-zA-Z0-9\\s\\.\\:]+)Change\\syour\\snotification\\spreferences";
+	final static String mailConfluenceIssueKeyToFilter = "[\\>\\sa-z]+\\(([A-Z\\-0-9]+)\\)\\-\\-\\-";
+	final static String mailConfluenceContentCommentToFilter = "Comment\\sby\\s[A-Za-z\\-0-9]+\\:\\s+\\-+\\s*([\\(\\)\\-\\/\\;\\,a-zA-Z0-9\\s\\.\\:]+)Change\\syour\\snotification\\spreferences";
 	
 	static class Page{
 	String space;
